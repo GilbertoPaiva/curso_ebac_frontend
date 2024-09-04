@@ -1,0 +1,27 @@
+body {
+    background-color: #343a40; /* Fundo de cor escura */
+    color: #ffffff; /* Texto branco para contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #495057; /* Cor de fundo do formulário */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    width: 100%; /* Largura total */
+    max-width: 400px; /* Largura máxima */
+    margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+h2 {
+    text-align: center;
+}
+
+.btn-primary {
+    width: 100%;
+}
