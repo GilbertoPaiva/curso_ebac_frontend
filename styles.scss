@@ -1,0 +1,126 @@
+// Variáveis
+$background-color: #f5f6fa;
+$header-background-color: #182C61;
+$button-background-color: #44bd32;
+$button-hover-background-color: #4cd137;
+$font-family: 'Roboto', sans-serif;
+$container-max-width: 1024px;
+$container-padding: 16px;
+$product-item-border-radius: 16px;
+$product-button-border-radius: 8px;
+$product-button-padding: 8px 0;
+$product-item-margin-bottom: 32px;
+
+// Módulos
+@mixin container {
+  max-width: $container-max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin grid-layout($columns, $column-gap, $row-gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+// Estilos globais
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  background-color: $background-color;
+}
+
+li {
+  list-style: none;
+}
+
+// Container
+.container {
+  @include container;
+}
+
+// Header
+header {
+  background-color: $header-background-color;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .container {
+    @include flex-center;
+    padding: $container-padding 0;
+  }
+}
+
+.menu {
+  display: flex;
+
+  li {
+    font-weight: bold;
+    margin-left: 24px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+// Section
+section {
+  padding: 56px 0;
+
+  .products {
+    margin-top: 40px;
+    @include grid-layout(3, 1%, 4%);
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 48.5%);
+      column-gap: 3%;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: block;
+
+      .product-item {
+        margin-bottom: $product-item-margin-bottom;
+      }
+    }
+  }
+}
+
+// Product Item
+.product-item {
+  img {
+    width: 100%;
+    border-radius: $product-item-border-radius;
+  }
+
+  .product-button {
+    display: block;
+    background-color: $button-background-color;
+    color: #fff;
+    text-align: center;
+    padding: $product-button-padding;
+    border-radius: $product-button-border-radius;
+    margin-top: 8px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $button-hover-background-color;
+    }
+  }
+}
