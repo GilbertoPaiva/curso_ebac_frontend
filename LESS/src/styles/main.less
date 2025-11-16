@@ -1,0 +1,117 @@
+// Importações
+@import "variaveis.less";
+@import "mapas.less";
+
+// Reset e estilos globais
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #colors[backgroundColor];
+}
+
+li {
+    list-style: none;
+}
+
+// Container
+.container {
+    max-width: @maxWidthContainer;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Header com aninhamento
+header {
+    background-color: #colors[headerColor];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: @espacamentoPadrao 0;
+    }
+}
+
+// Menu com aninhamento
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: @espacamentoMenu;
+
+        a {
+            color: #colors[textColor];
+            text-decoration: none;
+        }
+    }
+}
+
+// Sections
+section {
+    padding: @espacamentoSection 0;
+}
+
+// Grid de produtos
+.products {
+    margin-top: @espacamentoProdutos;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+}
+
+// Item de produto com aninhamento
+.product-item {
+    img {
+        width: 100%;
+        border-radius: @borderRadiusImagem;
+    }
+}
+
+// Botão do produto
+.product-button {
+    display: block;
+    background-color: #colors[buttonColor];
+    color: #colors[textColor];
+    text-align: center;
+    padding: @espacamentoBotao 0;
+    border-radius: @borderRadiusBotao;
+    margin-top: @espacamentoBotao;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #colors[buttonHoverColor];
+    }
+}
+
+// Media queries usando escapings
+@media @breakpointTablet {
+    .container {
+        max-width: @maxWidthTablet;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media @breakpointMobile {
+    .products {
+        display: block;
+    }
+
+    .product-item {
+        margin-bottom: @espacamentoItem;
+    }
+}
