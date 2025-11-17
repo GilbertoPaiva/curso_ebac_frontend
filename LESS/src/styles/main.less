@@ -1,117 +1,119 @@
-// Importações
-@import "variaveis.less";
 @import "mapas.less";
 
-// Reset e estilos globais
+@breakpointMobile: ~"(max-width: 767px)";
+@breackpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.marginbottom-8 {
+    margin-bottom: 8px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
     background-color: #colors[backgroundColor];
+    color: #colors[textColor];
 }
 
 li {
     list-style: none;
 }
 
-// Container
 .container {
-    max-width: @maxWidthContainer;
+    max-width: 960px;
     width: 100%;
     margin: 0 auto;
-}
-
-// Header com aninhamento
-header {
-    background-color: #colors[headerColor];
-    position: sticky;
-    top: 0;
-    left: 0;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: @espacamentoPadrao 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+    
+    @media @breackpointTablet {
+        max-width: 80%;
     }
 }
 
-// Menu com aninhamento
-.menu {
+header {
+    text-align: center;
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+header {
+    padding-bottom: 24px;
+
+    .profile-avatar {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 100px;
+    }
+}
+
+.profile-bio {
+    text-align: center;
+    &-name{
+        font-size: 16px;
+        .marginbottom-8();
+    }
+
+    &-subtitle {
+        font-size: 14px;
+        .marginbottom-8();
+    }
+
+    &-description {
+        font-size: 14px;
+        opacity: .7;
+    }
+}
+
+.social-media-links {
     display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
 
     li {
-        font-weight: bold;
-        margin-left: @espacamentoMenu;
-
-        a {
-            color: #colors[textColor];
-            text-decoration: none;
+        img {
+            transition: all .3s ease;
+            &:hover {
+                transform: scale(1.3);
+            }
         }
     }
 }
 
-// Sections
-section {
-    padding: @espacamentoSection 0;
-}
+.projects-list {
+    margin-top: 32px;
+    &-item {
+        a {
+            text-decoration: none;
+            background-color: #colors[buttonColor];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #colors[textColor];
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #colors[buttonColor];
+            transition: all .5s ease;
 
-// Grid de produtos
-.products {
-    margin-top: @espacamentoProdutos;
-    display: grid;
-    grid-template-columns: repeat(3, 32.66%);
-    column-gap: 1%;
-    row-gap: 4%;
-    width: 100%;
-}
-
-// Item de produto com aninhamento
-.product-item {
-    img {
-        width: 100%;
-        border-radius: @borderRadiusImagem;
-    }
-}
-
-// Botão do produto
-.product-button {
-    display: block;
-    background-color: #colors[buttonColor];
-    color: #colors[textColor];
-    text-align: center;
-    padding: @espacamentoBotao 0;
-    border-radius: @borderRadiusBotao;
-    margin-top: @espacamentoBotao;
-    text-decoration: none;
-
-    &:hover {
-        background-color: #colors[buttonHoverColor];
-    }
-}
-
-// Media queries usando escapings
-@media @breakpointTablet {
-    .container {
-        max-width: @maxWidthTablet;
-    }
-
-    .products {
-        grid-template-columns: repeat(2, 48.5%);
-        column-gap: 3%;
-    }
-}
-
-@media @breakpointMobile {
-    .products {
-        display: block;
-    }
-
-    .product-item {
-        margin-bottom: @espacamentoItem;
+            &:hover {
+                color: #colors[buttonColor];
+                background-color: transparent;
+            }
+        }
     }
 }
