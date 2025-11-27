@@ -1,0 +1,21 @@
+{
+  "name": "boas-praticas-css",
+  "version": "1.0.0",
+  "description": "Exercício de boas práticas CSS com metodologia BEM",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass src/styles/main.scss main.css",
+    "sass:watch": "sass --watch src/styles/main.scss:main.css"
+  },
+  "keywords": [
+    "css",
+    "bem",
+    "sass",
+    "boas-praticas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

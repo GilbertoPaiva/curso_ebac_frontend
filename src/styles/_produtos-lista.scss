@@ -1,0 +1,8 @@
+.produtos-lista {
+    max-width: $largura-maxima-container;
+    width: 100%;
+    margin: 56px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1%;
+}

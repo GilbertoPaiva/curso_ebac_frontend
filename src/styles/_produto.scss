@@ -1,0 +1,37 @@
+.produto {
+    padding: $espacamento-base;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    &__imagem {
+        width: 100%;
+        display: block;
+    }
+
+    &__titulo {
+        font-size: $tamanho-fonte-titulo;
+        margin: $espacamento-base 0;
+    }
+
+    &__descricao {
+        color: $cor-texto-secundario;
+        line-height: 1.5;
+    }
+
+    &:hover {
+        border-color: $borda-destaque;
+        background-color: $cor-destaque;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+    }
+
+    &--destaque {
+        border: 2px solid $borda-destaque;
+        background-color: $cor-destaque;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+}
