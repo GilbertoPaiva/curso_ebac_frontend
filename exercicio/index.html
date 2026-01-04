@@ -10,25 +10,28 @@
 <body>
     <header>
         <div class="container">
-            <img class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
-            <h1 class="profile-name">Gian Souza</h1>
-            <h2 class="profile-username">@ogiansouza</h2>
+            <img class="profile-avatar" data-profile-avatar src="https://via.placeholder.com/180x180" alt="Avatar do perfil">
+            <h1 class="profile-name" data-profile-name>Carregando...</h1>
+            <h2 class="profile-username" data-profile-username>@</h2>
             <ul class="numbers">
                 <li class="numbers-item">
                     <h4>Repositórios</h4>
-                    5
+                    <span data-profile-repos>0</span>
                 </li>
                 <li class="numbers-item">
                     <h4>Seguidores</h4>
-                    5
+                    <span data-profile-followers>0</span>
                 </li>
                 <li class="numbers-item">
                     <h4>Seguindo</h4>
-                    5
+                    <span data-profile-following>0</span>
                 </li>
             </ul>
-            <a href="#" class="profile-link">Ver no Github</a>
+            <p class="profile-bio" data-profile-bio></p>
+            <a href="#" class="profile-link" data-profile-link rel="noopener noreferrer" target="_blank">Ver no Github</a>
+            <p class="status-message" data-status-message aria-live="polite"></p>
         </div>
     </header>
+    <script src="app.js"></script>
 </body>
 </html>

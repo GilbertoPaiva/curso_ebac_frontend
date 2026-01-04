@@ -1,5 +1,5 @@
 :root {
-    --header-color: #01a3a4;
+    --header-color: #124788;
     --bg-color: #eee;
 }
 
@@ -55,6 +55,16 @@ header .container {
     display: inline-block;
     margin-top: 24px;
     text-decoration: none;
+}
+
+.profile-bio {
+    margin: 16px 0;
+    font-size: 0.95em;
+}
+
+.status-message {
+    margin-top: 12px;
+    font-size: 0.9em;
 }
 
 .numbers {
