@@ -1,10 +1,16 @@
-# Exercicio ES6
+# Exercicio TypeScript
 
-Filtra alunos aprovados (nota >= 6) a partir de um array de objetos.
+Funções tipadas para multiplicação e saudação.
 
-## Como executar
-1. No terminal, navegue ate a raiz do projeto.
-2. Rode `node src/exercicio_es6.js`.
-3. Veja no console a lista completa e os aprovados.
+## O que foi pedido
+- Criar uma função `multiplicar` que recebe dois números e retorna o produto.
+- Criar uma função `saudacao` que recebe um nome e retorna `Olá ` + nome.
 
-Branch: `exercicio_es6`.
+## Onde está o código
+- `src/exercicio_ts.ts`: implementa ambas as funções e inclui um pequeno trecho de exemplo.
+
+## Como executar rapidamente
+1. Na raiz do projeto, rode `npx ts-node src/exercicio_ts.ts` para executar diretamente o TypeScript.
+2. Ou transpile para JavaScript com `npx tsc src/exercicio_ts.ts --outDir dist` e execute `node dist/exercicio_ts.js`.
+
+Branch: `exercicio_ts`.
