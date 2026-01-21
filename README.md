@@ -1,10 +1,10 @@
-# Orientacao a Objetos em JavaScript
+# Exercicio ES6
 
-Exemplo em console com uma classe base abstrata (`Colecionavel`) e classes filhas (`Livro`, `Filme`, `Jogo`). Tres instancias sao criadas e exibidas.
+Filtra alunos aprovados (nota >= 6) a partir de um array de objetos.
 
 ## Como executar
 1. No terminal, navegue ate a raiz do projeto.
-2. Rode `node src/main.js`.
-3. Veja a tabela e os filtros no console.
+2. Rode `node src/exercicio_es6.js`.
+3. Veja no console a lista completa e os aprovados.
 
-Branch utilizada: `oo_js`.
+Branch: `exercicio_es6`.
